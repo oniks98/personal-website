@@ -44,3 +44,10 @@ function handleStart() {
 }
 
 document.querySelector('.start-btn').addEventListener('click', handleStart);
+
+// Toggle switch theme handler
+document.querySelector('#toggle-main').addEventListener('change', () => {
+  const isDarkMode = document.querySelector('#toggle-main').checked;
+  const theme = isDarkMode ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', theme);
+});
