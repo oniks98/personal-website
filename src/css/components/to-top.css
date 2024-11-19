@@ -8,10 +8,10 @@
   height: 40px;
   border-radius: 50%;
   border: none;
-  color: wheat;
+  color: white;
   cursor: pointer;
   border-radius: 100%;
-  background-color: red;
+  background-color: #00b068;
 
   transition: opacity var(--time) var(--cubic),
     transform var(--time) var(--cubic);

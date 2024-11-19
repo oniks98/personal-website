@@ -1,17 +1,6 @@
 @import 'node_modules/modern-normalize/modern-normalize.css';
 
-/* #region Utils styles */
 @import url('./utils/utils.css');
-/* #endregion */
-
-/* #region Base styles */
 @import url('./base/base.css');
-/* #endregion */
-
-/* #region Components styles */
 @import url('./components/components.css');
-/* #endregion */
-
-/* #region Partials styles */
 @import url('./partials/partials.css');
-/* #endregion */
