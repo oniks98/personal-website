@@ -10,10 +10,16 @@ function handleStart() {
 
   document.documentElement.setAttribute('data-theme', theme);
 
+  const toggleMain = document.querySelector('#toggle-main');
+  if (toggleMain) {
+    toggleMain.checked = theme === 'dark';
+  } else {
+    console.error('#toggle-main not found');
+  }
+
   setTimeout(() => {
-    const appSection = document.querySelector('.App');
-    if (appSection) {
-      appSection.style.display = 'none';
+    if (page) {
+      page.style.display = 'none';
     } else {
       console.error('.App section not found');
     }
@@ -45,7 +51,6 @@ function handleStart() {
 
 document.querySelector('.start-btn').addEventListener('click', handleStart);
 
-// Toggle switch theme handler
 document.querySelector('#toggle-main').addEventListener('change', () => {
   const isDarkMode = document.querySelector('#toggle-main').checked;
   const theme = isDarkMode ? 'dark' : 'light';

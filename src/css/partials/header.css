@@ -23,7 +23,7 @@
 .toggle-main label::after {
   background: linear-gradient(40deg, #00b068, #00b068 70%);
   border-radius: 50%;
-  content: ' ';
+  content: '';
   cursor: pointer;
   display: inline-block;
   position: absolute;
@@ -35,11 +35,10 @@
 }
 
 .toggle-main input[type='checkbox']:checked ~ label {
-  background-color: #26242e;
-  border-color: #8983f7;
+  background-color: #292929;
 }
 
 .toggle-main input[type='checkbox']:checked ~ label::after {
   background: linear-gradient(40deg, #00b068, #00b068 70%);
-  transform: translateX(40px);
+  transform: translateX(22px);
 }
