@@ -1,0 +1,12 @@
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  color: var(--main-color);
+  background-color: var(--main-bcg);
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  flex-grow: 1;
+}
