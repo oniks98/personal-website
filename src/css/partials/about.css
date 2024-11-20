@@ -1,0 +1,89 @@
+.section-wrapper{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.about-me-section{
+    font-family: 'Impact', sans-serif;
+    font-size: 52px;
+    line-height: 1.23077;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--main-cl);
+    margin-bottom: 40px;
+}
+
+.about-me-section-span {
+    color: var(--accent-cl);
+}
+
+.about-section-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.bio-text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 32px;
+
+}
+
+
+.about-me-img {
+    border-radius: 18px;
+    width: 320px;
+    height: 374px;
+    margin-bottom: 40px;
+}
+
+.educ-list-item::before,
+.role-list-item::before {
+    content: '';
+    display: inline-block;
+    border-radius: 1px;
+    width: 4px;
+    height: 4px;
+    background: var(--accent-cl);
+    transform: rotate(-180deg);
+    position: relative;
+    left: 10px;
+    top: 20px;
+}
+
+.about-me-info{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.educ-title{
+padding-top: 40px;
+}
+
+.educ-title,
+.role-title,
+.bio-title {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--main-cl);
+}
+
+.educ-list,
+.role-list {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.educ-list-text,
+.role-list-text {
+    color: var(--main-cl);
+    margin-left: 32px;
+}
