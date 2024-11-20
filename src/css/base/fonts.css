@@ -34,5 +34,5 @@
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
-  src: url('./fonts/poppins-v21-latin-600.woff2');
+  src: url('./fonts/poppins-v21-latin-600.woff2') format('woff2');
 }
