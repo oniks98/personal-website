@@ -19,6 +19,7 @@
   "dependencies": {
     "accordion-js": "^3.3.4",
     "body-scroll-lock": "^4.0.0-beta.0",
+    "gsap": "^3.12.5",
     "modern-normalize": "^3.0.1",
     "vite-plugin-full-reload": "^1.2.0",
     "vite-plugin-html-inject": "^1.1.2"
