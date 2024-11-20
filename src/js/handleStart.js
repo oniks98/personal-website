@@ -26,25 +26,25 @@ function handleStart() {
   }, 1000);
 
   const contentSections = [
-    'header-container',
-    'hero-container',
-    'about-container',
-    'tech-container',
-    'projects-container',
-    'benefits-container',
-    'questions-container',
-    'reviews-container',
-    'collaboration-container',
-    'footer-container',
-    'to-top-container',
+    '.hdr',
+    '.ftr',
+    '.tch',
+    '.hr',
+    '.prj',
+    '.bnf',
+    '.abt',
+    '.qtn',
+    '.rws',
+    '.clb',
+    '.top',
   ];
 
-  contentSections.forEach(id => {
-    const section = document.getElementById(id);
+  contentSections.forEach(className => {
+    const section = document.querySelector(className);
     if (section) {
       section.style.display = 'block';
     } else {
-      console.error(`Element with ID ${id} not found`);
+      console.error(`Element with class ${className} not found`);
     }
   });
 }
