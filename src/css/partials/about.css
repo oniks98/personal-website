@@ -1,6 +1,9 @@
+.section-wrapper{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
 
 .about-me-section{
-    margin-top: 164px;
     font-family: 'Impact', sans-serif;
     font-size: 52px;
     line-height: 1.23077;
@@ -20,11 +23,12 @@
     margin-bottom: 40px;
 }
 
-.bio-list {
+.bio-text {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    margin-top: 32px;
+    padding-top: 32px;
+
 }
 
 
@@ -56,6 +60,10 @@
     gap: 40px;
 }
 
+.educ-title{
+padding-top: 40px;
+}
+
 .educ-title,
 .role-title,
 .bio-title {
@@ -65,7 +73,6 @@
     letter-spacing: 0.02em;
     text-transform: uppercase;
     color: var(--main-cl);
-    
 }
 
 .educ-list,
