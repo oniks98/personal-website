@@ -1,8 +1,8 @@
-import axios from 'axios';
 import Swiper from 'swiper';
 import { Navigation, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import axios from 'axios';
 
 const reviewsWrapper = document.querySelector('.reviews-swiper-wrapper');
 const prevBtn = document.querySelector('.reviews-prev-btn');
@@ -64,6 +64,7 @@ function Error(message) {
 
 function initSwiper() {
   new Swiper('.swiper-reviews', {
+    modules: [Navigation, Keyboard],
     slidesPerView: 1,
     spaceBetween: 20,
     navigation: {
@@ -78,6 +79,7 @@ function initSwiper() {
       prevSlideMessage: 'Previous slide',
       nextSlideMessage: 'Next slide',
     },
+    allowTouchMove: true,
   });
 }
 
