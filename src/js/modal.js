@@ -16,6 +16,7 @@ function closeModal() {
   document.removeEventListener('keydown', handleEscape);
 }
 
+
 function handleEscape(event) {
   if (event.key === 'Escape') {
     closeModal();
