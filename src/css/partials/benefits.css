@@ -108,7 +108,7 @@
 
   .benefits-item:first-child {
     width: 100%;
-    margin-left: calc((100% - 64px) / 3);
+    margin-left: calc((100% - 64px) / 1.4);
   }
 
   .subtitle-benefits {
@@ -122,4 +122,10 @@
     line-height: 1.5;
     color: var(--main-cl);
   }
+  
+  .benefits-container {
+    background-image: url('/src/images/benefits/favicon.png');
+  }
+
+
 }
