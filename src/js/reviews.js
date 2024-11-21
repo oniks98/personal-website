@@ -1,37 +1,44 @@
 import axios from 'axios';
+import Swiper from 'swiper';
+import { Navigation, Keyboard } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 const reviewsWrapper = document.querySelector('.reviews-swiper-wrapper');
 const prevBtn = document.querySelector('.reviews-prev-btn');
 const nextBtn = document.querySelector('.reviews-next-btn');
 const reviewsContainer = document.querySelector('.reviews-container');
-const BASE_URL = 'https://portfolio-js.b.goit.study/api-docs';
+const BASE_URL = 'https://portfolio-js.b.goit.study/api/reviews';
 
-// Функція для отримання відгуків
 async function fetchReviews() {
   try {
-    const response = await axios.get('${BASE_URL}');
+    const response = await axios.get(BASE_URL);
     const reviews = response.data;
+    console.log('response', response);
 
     if (!reviews || reviews.length === 0) {
-      reviewsWrapper.innerHTML = '<li>Not Found</li>';
+      reviewsWrapper.innerHTML = '<li class="list_reviews">Not Found</li>';
       return;
     }
 
-    // Створення розмітки для всіх відгуків
     const reviewsMarkup = reviews
       .map(
         review => `
           <li class="swiper-slide reviews-swiper-slide">
-            <img 
-              src="${review.avatar_url}" 
-              loading="lazy" 
-              alt="${review.author}" 
-              class="reviews-img" 
-              width="48" 
-              height="48">
+            
             <div class="reviews-desc">
-              <h3 class="reviews-item-subtitle">${review.author}</h3>
+             
               <div class="reviews-text">${review.review}</div>
+            </div>
+            <div class="reviews-info-author">
+                <img 
+                  src="${review.avatar_url}" 
+                  loading="lazy" 
+                  alt="${review.author}" 
+                  class="reviews-img" 
+                  width="48" 
+                  height="48">
+                   <h3 class="reviews-item-subtitle">${review.author}</h3>
             </div>
           </li>
         `
@@ -67,9 +74,9 @@ function initSwiper() {
       enabled: true,
       onlyInViewport: true,
     },
-    on: {
-      slideChange: checkButtonsState,
-      afterInit: checkButtonsState,
+    a11y: {
+      prevSlideMessage: 'Previous slide',
+      nextSlideMessage: 'Next slide',
     },
   });
 }
