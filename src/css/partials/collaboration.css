@@ -12,7 +12,7 @@
     font-family: 'Impact', sans-serif;
     font-weight: 400;
     font-size: 52px;
-    line-height: 1,23;
+    line-height: 1.23;
     text-transform: uppercase;
     margin-bottom: 40px;
 }
@@ -20,7 +20,7 @@
 .collaboration-text {
     font-weight: 400;
     font-size: 18px;
-    line-height: 1,56;
+    line-height: 1.56;
     text-transform: uppercase;
     text-align: left;
     margin-bottom: 32px;
@@ -99,7 +99,7 @@
 .invalid-email {
     font-weight: 300;
     font-size: 12px;
-    line-height: 1,3;
+    line-height: 1.3;
     letter-spacing: 0.04em;
 }
 
@@ -113,6 +113,7 @@
     border-color: transparent;
     background-color: var(--third-bcg);
     cursor: pointer;
+    resize: none;
 }
 
 .send-button {
@@ -144,14 +145,14 @@
 
     .collaboration-title {
         font-size: 108px;
-        line-height: 1,15;
+        line-height: 1.15;
         letter-spacing: 0.02em;
         margin-bottom: 60px;
     }
 
     .collaboration-text {
         font-size: 20px;
-        line-height: 1,6;
+        line-height: 1.6;
         width: 500px;
         margin-bottom: 32px;
 

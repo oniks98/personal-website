@@ -1,7 +1,6 @@
 .benefits {
     padding-bottom: 80px;
 }
-
 .title-benefits {
     font-family: 'Impact', sans-serif;
     font-weight: 400;
@@ -11,12 +10,8 @@
     color: var(--accent-cl);
     margin-bottom: 40px;
 }
-
-
-
 .title-benefits-spam {
-    color: #2a2d32;
-
+    color: #2A2D32;
     @media only screen and (min-width: 768px) {
         .title-benefits {
             font-size: 108px;
@@ -25,63 +20,46 @@
        .benefits-list {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between; 
+        justify-content: space-between;
         align-items: flex-start;
-        gap: 20px; 
+        gap: 20px;
         padding: 0;
-        margin: 0 auto; 
+        margin: 0 auto;
         list-style: none;
-     
     }
-    
     .benefits-item {
-        flex: 1 1 calc(50% - 20px); 
+        flex: 1 1 calc(50% - 20px);
         max-width: 48%;
-        text-align: center; 
-        padding: 20px; 
-        border-radius: 8px; 
-    
+        text-align: center;
+        padding: 20px;
+        border-radius: 8px;
     }
-    
     .communication {
         display: block;
-        clear: both; 
+        clear: both;
     }
-        
         .benefits-item:nth-child(2n+1) {
-            margin-right: auto; 
+            margin-right: auto;
         }
-        
-    
-        
-        
         .container-icon {
-            margin-bottom: 16px; 
+            margin-bottom: 16px;
         }
-        
         .subtitle-benefits {
             font-size: 20px;
             margin: 10px 0;
             color: #333;
             text-transform: uppercase;
         }
-        
         .benefits-text {
             font-size: 16px;
             line-height: 1.5;
             color: #555;
         }
-        
     }
-
-
-
-
 }
 .benefits-item:not(:last-child) {
     margin-bottom: 32px;
 }
-
 .container-icon {
     display: flex;
     align-items: center;
@@ -89,18 +67,13 @@
 width: 48px;
 height: 48px;
 border-radius: 8px;
-background-color: var(--second-bcg); 
-
+background-color: var(--second-bcg);
 }
-
 .benefits-icon {
     stroke: var(--accent-cl);
     fill: none;
    margin: 12px;
-   
-
 }
-
 .subtitle-benefits {
 font-weight: 400;
 font-size: 18px;
@@ -109,10 +82,7 @@ text-transform: uppercase;
 color: var(--main-cl);
 margin-bottom: 16px;
 }
-
 .benefits-text {
 line-height: 1.5;
 color: var(--main-cl);
 }
-
-
