@@ -1,0 +1,124 @@
+.reviews-container {
+  flex-direction: column;
+}
+
+.reviews-title {
+  font-family: 'Impact', sans-serif;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.23;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.swiper {
+  position: relative;
+}
+
+.swiper-slide {
+}
+.reviews-swiper-slide {
+  max-width: 320px;
+  padding: 32px 0;
+  text-align: left;
+  text-decoration: none;
+  color: #292929;
+  background-color: #e4e5e6;
+  border-radius: 16px;
+  padding: 32px 32px 96px 32px;
+}
+.reviews-img {
+  border-radius: 24px;
+  width: 40px;
+  height: 40px;
+}
+.reviews-desc {
+  margin-bottom: 24px;
+}
+.reviews-item-subtitle {
+}
+.reviews-text {
+  max-width: 265px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: #292929;
+}
+
+.swiper-reviews {
+}
+.swiper-wrapper {
+}
+
+.reviews-swiper-wrapper {
+  max-width: 320px;
+
+  margin-bottom: 24px;
+
+  /* position: relative; */
+}
+
+.reviews-swiper-btn-container {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.reviews-btn-wrap {
+}
+
+.reviews-button-icon {
+  justify-content: center;
+}
+
+.reviews-prev-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  gap: 10px;
+  border-radius: 8px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+}
+
+.reviews-next-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  gap: 10px;
+  border-radius: 8px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+}
+.list_reviews {
+  font-family: 'Poppins', sans-serif;
+  padding-top: 32px;
+  padding-right: 32px;
+  padding-left: 32px;
+}
+
+.reviews-info-author {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  gap: 16px;
+}
+
+.reviews-item-subtitle {
+  align-content: center;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: #292929;
+}
