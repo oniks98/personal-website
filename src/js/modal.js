@@ -10,7 +10,7 @@ function openModal() {
 
 
 
-function closeModall() {
+function closeModal() {
   modal.style.display = 'none';
 
   document.removeEventListener('keydown', handleEscape);
