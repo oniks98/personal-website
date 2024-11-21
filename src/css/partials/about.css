@@ -17,11 +17,11 @@
     color: var(--accent-cl);
 }
 
-.about-section-list {
+/* .about-section-list {
     display: flex;
     flex-direction: column;
     margin-bottom: 40px;
-}
+} */
 
 .bio-text {
     display: flex;
@@ -55,13 +55,12 @@
 
 .about-me-info{
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
-    gap: 40px;
+    gap: 32px;
 }
 
 .educ-title{
-padding-top: 40px;
+    padding-top: 40px;
 }
 
 .educ-title,
@@ -86,4 +85,119 @@ padding-top: 40px;
 .role-list-text {
     color: var(--main-cl);
     margin-left: 32px;
+}
+
+@media screen and (min-width: 768px) {
+.section-wrapper{
+    padding-top: 124px;
+    padding-bottom: 124px;
+}
+
+.about-me-section{
+    font-size: 108px;
+
+}
+
+.about-section-list {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.bio-text {
+    width: 336px;
+}
+
+.about-me-container{
+    display: flex;
+    gap: 32px;
+}
+
+.about-me-img {
+    width: 336px;
+    height: 392px;
+    margin-top: 368px;
+    margin-bottom: 0;
+}
+
+.about-me-bio-item {
+    display: flex;
+    flex-direction: row;
+    gap: 136px;
+}
+
+/* .educ-title{
+    width: 384px;
+} */
+
+.educ-title,
+.role-title,
+.bio-title{
+    font-size: 36px;
+    line-height: 48px;
+    line-height: 1.33333;
+    letter-spacing: 0.01em;
+    }
+
+.section-about-me{
+    background-image: url(/images/about/bg-2-min.png);
+    background-repeat: no-repeat;
+    background-position: right 10px bottom 150px;
+    background-size: auto;
+}
+
+.about-me-info{
+  flex-direction: row;
+}
+    
+
+.about-me-content-item{
+width: 336px;
+}
+
+.about-me-content-list{
+    align-items: center;
+    padding-top: 40px;
+}
+
+}
+
+@media screen and (min-width: 1280px) {
+
+.section-wrapper {
+    padding-top: 164px;
+    padding-bottom: 164px;
+}
+
+.about-me-section {
+    font-size: 108px;
+    line-height: 124px;
+    letter-spacing: 0.02em;
+}
+
+.bio{
+    margin-bottom: 80px;
+}
+
+.about-me-img {
+    width: 384px;
+    height: 448px;
+    margin-top: 272px;
+    }
+
+.about-me-container{
+    justify-content: flex-end;
+    gap: 136px;
+}
+   
+.about-me-info{
+    align-items: flex-start;
+    justify-content: center;
+    gap: 136px;
+}
+        
+.bio-text {
+    width: 488px;
+}
+
 }
