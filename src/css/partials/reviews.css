@@ -1,0 +1,87 @@
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.item_reviews {
+  display: flex;
+  justify-content: center;
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 64px;
+  letter-spacing: 1.8px;
+  text-align: left;
+  padding-bottom: 40px;
+}
+.swiper {
+  border-radius: 16px;
+  padding: 32px 32px 96px 32px;
+  max-width: 320px;
+  background-color: #e4e5e6;
+}
+.swiper-slide {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  text-decoration: none;
+  color: #292929;
+}
+.reviews-swiper-slide {
+}
+.reviews-img {
+}
+.reviews-desc {
+}
+.reviews-item-subtitle {
+}
+.reviews-text {
+}
+.swiper-reviews {
+}
+.swiper-wrapper {
+}
+.reviews-swiper-wrapper {
+  position: relative;
+}
+.reviews-swiper-btn-container {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+}
+.reviews-btn-wrap {
+}
+
+.reviews-button-icon {
+  justify-content: center;
+}
+.reviews-prev-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  gap: 10px;
+  border-radius: 8px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+}
+.reviews-next-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  gap: 10px;
+  border-radius: 8px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+}
