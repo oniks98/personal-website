@@ -17,6 +17,7 @@ function closeModal() {
 }
 
 
+
 function handleEscape(event) {
   if (event.key === 'Escape') {
     closeModal();
