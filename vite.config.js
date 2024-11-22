@@ -10,6 +10,7 @@ export default defineConfig(({ command }) => {
       [command === 'serve' ? 'global' : '_global']: {},
     },
     root: 'src',
+    base: '/landing-page-2.0/',
     build: {
       sourcemap: true,
       rollupOptions: {
