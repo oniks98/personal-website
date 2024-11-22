@@ -12,6 +12,7 @@
   --second-accent-cl: #bcdfd1;
   --second-bcg: #bcdfd1;
   --third-bcg: #e4e5e6;
+  --hover: #009156
 }
 
 [data-theme='dark'] {
@@ -21,4 +22,5 @@
   --second-accent-cl: #14c57c;
   --second-bcg: #204136;
   --third-bcg: #2a2d32;
+  --hover: #BBBBBB
 }
