@@ -47,13 +47,13 @@
   margin: 3rem 0 0.2rem 0;
 }
 
-label,
+.label-theme,
 .toggle {
   height: 2.8rem;
   border-radius: 100px;
 }
 
-label {
+.label-theme {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 100px;
@@ -65,6 +65,7 @@ label {
 .toggle {
   position: absolute;
   width: 50%;
+  display: block;
   background-color: #fff;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
