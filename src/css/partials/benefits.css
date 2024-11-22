@@ -90,3 +90,36 @@
     color: var(--main-cl);
   }
 }
+
+@media only screen and (min-width: 1280px) {
+  .title-benefits {
+    font-size: 108px;
+    line-height: 1.15;
+    width: 681px;
+  }
+
+  .benefits-list {
+    gap: 32px;
+  }
+
+  .benefits-item {
+     width: calc((100% - 64px) / 3);
+  }
+
+  .benefits-item:first-child {
+    width: 100%;
+    margin-left: calc((100% - 64px) / 3);
+  }
+
+  .subtitle-benefits {
+    font-size: 20px;
+    color: var(--main-cl);
+    text-transform: uppercase;
+  }
+
+  .benefits-text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--main-cl);
+  }
+}
