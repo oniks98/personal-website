@@ -41,6 +41,7 @@
 .contacts {
     display: flex;
     gap: 16px;
+    transition: color var(--time) var(--cubic);
 }
 
 .contacts:hover,
@@ -87,9 +88,10 @@
     transform: translateY(-50%);
     left: 288px;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    background-color: var(--accent-cl);
+    background-color: var(--third-bcg);
     border-radius: 50%;
-    stroke: var(--third-bcg);
+    fill: var(--accent-cl);
+    
 }
 
 .done-icon.is-hidden {
@@ -116,6 +118,15 @@
     resize: none;
 }
 
+input::placeholder {
+    color: var(--main-cl);
+}
+
+textarea::placeholder {
+    color: var(--main-cl);
+}
+
+
 .send-button {
     display: block;
     border-radius: 8px;
@@ -129,6 +140,7 @@
     text-align: center;
     border-color: transparent;
     cursor: pointer;
+    transition: background-color var(--time) var(--cubic);
 }
 
 .send-button:hover,
