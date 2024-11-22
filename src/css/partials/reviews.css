@@ -88,3 +88,24 @@
   letter-spacing: 0.03em;
   color: #292929;
 }
+@media screen and (min-width: 768px) {
+  .reviews {
+    padding-top: 124px;
+  }
+  .reviews-title {
+    font-weight: 400;
+    font-size: 108px;
+    line-height: 1.14;
+    margin-bottom: 60px;
+  }
+  .reviews-swiper-slide {
+  }
+  .reviews-text {
+    max-width: 640px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: #292929;
+  }
+}
