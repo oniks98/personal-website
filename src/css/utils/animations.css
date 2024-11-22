@@ -18,3 +18,23 @@
     transform: scale(1, 1);
   }
 }
+
+@keyframes tickerScrollRight {
+  0% {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes tickerScrollLeft {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
