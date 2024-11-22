@@ -1,3 +1,5 @@
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 const modal = document.getElementById('modal');
 const closeModalButton = document.querySelector('.close-btn');
@@ -8,15 +10,11 @@ function openModal() {
   document.addEventListener('keydown', handleEscape);
 }
 
-
-
 function closeModal() {
   modal.style.display = 'none';
 
   document.removeEventListener('keydown', handleEscape);
 }
-
-
 
 function handleEscape(event) {
   if (event.key === 'Escape') {
@@ -26,13 +24,14 @@ function handleEscape(event) {
 
 closeModalButton.addEventListener('click', closeModal);
 
-modal.addEventListener('click', (event) => {
+modal.addEventListener('click', event => {
   if (event.target === modal) {
     closeModal();
   }
 });
 
-  iziToast.show({
+function showModalIzi() {
+  return iziToast.show({
     theme: 'dark',
     class: 'toastStyle',
     title: 'Thank you for your interest in cooperation!',
@@ -49,13 +48,19 @@ modal.addEventListener('click', (event) => {
     closeOnClick: false,
     overlayClose: true,
   });
+}
+
+function showEroorIzi(error) {
   iziToast.show({
     class: 'izi',
     title: 'Error',
-    message: `Error: ${error.message}`,
+    message: `Error: ${error}`,
     position: 'center',
     progressBar: false,
     closeOnEscape: true,
     closeOnClick: true,
     timeout: 0,
   });
+}
+
+export { openModal, showModalIzi, showEroorIzi };
