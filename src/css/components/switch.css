@@ -39,12 +39,14 @@
 }
 
 .toggle-main input[type='checkbox']:checked ~ label::after {
-  background: linear-gradient(40deg, #00b068, #00b068 70%);
   transform: translateX(22px);
 }
 
 .svg-icon {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-22px);
+  transition: opacity 0.3s ease-in-out, transform 0.4s ease-in-out;
 }
 
 [data-theme='dark'] .svg-icon {
@@ -55,9 +57,13 @@
   position: absolute;
   right: 4px;
   top: 2px;
-  transition: all ease-in-out 0.3s;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
 }
 
 [data-theme='dark'] .toggle-main label::after {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
 }
