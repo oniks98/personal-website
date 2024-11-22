@@ -51,16 +51,16 @@ img {
   overflow: hidden;
 }
 
-#header-container,
-#hero-container,
-#tech-container,
-#projects-container,
-#benefits-container,
-#questions-container,
-#reviews-container,
-#about-container,
-#collaboration-container,
-#footer-container,
-#to-top-container {
+.hdr,
+.ftr,
+.tch,
+.hr,
+.prj,
+.bnf,
+.abt,
+.qtn,
+.rws,
+.clb,
+.top {
   display: none;
 }
