@@ -123,7 +123,7 @@
   background-color: var(--accent-cl);
 }
 
-/* @media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .section-projects {
     padding-top: 124px;
     padding-bottom: 124px;
@@ -178,11 +178,11 @@
   }
 
   .projects-button_loading::after {
-  width: 119px;
- }
+    width: 119px;
+  }
 }
 
-@media only screen and (min-width: 1280px) {
+/* @media only screen and (min-width: 1280px) {
   .section-projects {
     padding-top: 164px;
     padding-bottom: 164px;
