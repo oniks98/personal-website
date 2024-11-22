@@ -184,6 +184,7 @@ const loadMoreButton = document.querySelector('.projects-button_loading');
 loadMoreButton.addEventListener('click', loadProjects);
 
 let loadedProjectsCount = 0;
+let previousCount = 3;
 
 function loadProjects() {
   const batchSize = 3;
@@ -198,6 +199,7 @@ function loadProjects() {
   );
 
   loadedProjectsCount += remainingProjects.length;
+  scrollOnLoad();
 
   if (loadedProjectsCount >= images.length) {
     loadMoreButton.classList.add('hidden');
@@ -247,4 +249,17 @@ function createMarkupProjects(images) {
       </li>`
     )
     .join('');
+}
+
+function scrollOnLoad() {
+  const cards = document.querySelectorAll('.projects-list_img > li');
+
+  const firstNewCard = cards[previousCount];
+  if (firstNewCard) {
+    firstNewCard.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  }
+  previousCount += 3;
 }
