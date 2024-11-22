@@ -1,8 +1,4 @@
-/* .faq {
-    margin: 20px auto;
-  
-  } */
-  
+
   .faq-title {
     font-family: "Impact", sans-serif;
     text-align: start;
@@ -36,7 +32,7 @@
     border-radius: 16px 16px 0 0;
     border-bottom: 1px solid var(--main-bcg);
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: color var(--time) var(--cubic), background-color var(--time) var(--cubic);
     
   }
   
@@ -50,7 +46,7 @@
     cursor: pointer;
     align-items: center;
     text-align: left;
-    transition: background 0.3s;
+    transition: background-color var(--time) var(--cubic);
     display: flex;
     gap: 16px;
   
@@ -64,7 +60,7 @@
     padding: 28px 24px;
     position: relative;
   
-  transition: background-color 0.3s ease, color 0.3s ease;
+    transition: color var(--time) var(--cubic), background-color var(--time) var(--cubic);
   }
   
   
@@ -130,3 +126,65 @@
     transform: translateY(-50%) rotate(225deg); 
   }
   
+  /* ==========TABLET============ */
+  
+@media screen and (min-width: 768px){
+    .faq-title {
+      font-size: 108px;
+      line-height: 1.15;
+      letter-spacing: 0.02em;
+      margin-bottom: 60px;
+    }
+    
+    .faq-question {
+      font-size: 20px;
+    line-height: 1.6;
+    
+    }
+  }
+
+  /* ====DESKTOP==== */
+
+
+@media screen and (min-width: 1280px) {
+    
+    .title-qth{
+      display: flex;
+      flex-direction: row;
+      width: 520px;
+    }
+    
+    .faq-content{
+      display: flex;
+      flex-direction: row;
+    }
+    
+    .faq-content {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    
+    .faq-list{
+      width: 592px;
+      margin-top: 276px;
+    }
+    
+    .faq-question{
+      justify-content: space-between;
+    }
+
+    .faq {
+        position: relative;
+        background-image: url('/images/questions/decor-bg-4-min.png'); 
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: bottom left;
+        margin-left: 32px;
+      }
+
+    }
+        

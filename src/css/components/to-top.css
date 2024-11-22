@@ -1,17 +1,19 @@
 .scroll-to-top {
-  display: block;
   position: fixed;
   z-index: 20;
   bottom: 60px;
   right: 5%;
   width: 40px;
   height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   border: none;
-  color: white;
+  color: #f0f0f0;
   cursor: pointer;
   border-radius: 100%;
-  background-color: #00b068;
+  background-color: var(--accent-cl);
 
   transition: opacity var(--time) var(--cubic),
     transform var(--time) var(--cubic);
