@@ -86,7 +86,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 288px;
+    right: 30px;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color: var(--third-bcg);
     border-radius: 50%;
@@ -153,7 +153,14 @@ textarea::placeholder {
     .collaboration {
         padding-top: 124px;
         padding-bottom: 124px;
+        background-image: url('/images/hero/hero-bg-one-min-opt.png');
+        background-repeat: no-repeat;
+        background-position: top right 32px;
+        background-size: 336px 260px;
+           
     }
+    
+
 
     .collaboration-title {
         font-size: 108px;
@@ -197,6 +204,11 @@ textarea::placeholder {
     .collaboration {
         padding-top: 164px;
         padding-bottom: 164px;
+
+        background-image: url('/images/benefits/decor-bg-3-min.png');
+        background-repeat: no-repeat;
+        background-position: top right 32px;
+        background-size: 526px 408px;
     }
 
     .collaboration-title {
