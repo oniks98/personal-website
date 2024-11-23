@@ -73,17 +73,15 @@
 .reviews-next-btn.disabled,
 .reviews-prev-btn[disabled],
 .reviews-next-btn[disabled] {
-  background-color: var(--third-bcg); /* Колір неактивної кнопки */
-  cursor: not-allowed; /* Змінюємо курсор для неактивної кнопки */
-  opacity: 0.6; /* Зменшуємо прозорість */
-  border-color: #d1d1d1; /* Змінюємо колір бордюра для неактивної кнопки */
+  background-color: var(--third-bcg);
+  cursor: not-allowed;
+  opacity: 0.6;
+  border-color: #d1d1d1;
 }
 
-/* Ховер для активних кнопок */
 .reviews-prev-btn:hover:not(.disabled):not([disabled]),
 .reviews-next-btn:hover:not(.disabled):not([disabled]) {
   background-color: var(--main-bcg);
-  border-color: var(--main-cl);
 }
 
 .reviews-prev-btn:hover,
