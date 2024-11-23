@@ -150,10 +150,6 @@
   animation: animate 3s ease;
 }
 
-.fadeIn {
-  z-index: 10;
-}
-
 @media (max-width: 700px) {
   .content {
     width: 70%;
