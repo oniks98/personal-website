@@ -50,10 +50,11 @@ async function fetchReviews() {
     initSwiper();
   } catch (error) {
     console.error('Error fetching reviews:', error);
-    Error('Failed to load reviews. Please try again later.');
-    reviewsWrapper.innerHTML = '<li>Not Found</li>';
+
+    reviewsWrapper.innerHTML = `<li class="list_reviews"><div class="error"><p>Not Found</p><p>Failed to load reviews. Please try again later.</p></div></li>`;
   }
 }
+Error('');
 
 function Error(message) {
   const errorElement = document.createElement('div');
