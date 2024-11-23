@@ -90,7 +90,6 @@
 .reviews-prev-btn:hover:not(.disabled):not([disabled]),
 .reviews-next-btn:hover:not(.disabled):not([disabled]) {
   background-color: var(--main-bcg);
-  border-color: var(--main-cl);
 }
 
 .reviews-prev-btn:hover,
