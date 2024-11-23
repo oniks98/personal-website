@@ -1,6 +1,5 @@
-import 'izitoast/dist/css/iziToast.min.css';
 import axios from 'axios';
-import { openModal, showModalIzi, showEroorIzi } from './modal.js'
+import { showModalIzi, showEroorIzi } from './modal.js';
 
 const confirmEmail = document.querySelector('.done-icon');
 const formEl = document.querySelector('.input-info');
@@ -45,7 +44,6 @@ function checkFormValidity() {
 }
 
 function onInputEmail() {
-  const emailPattern = /^\w+(\.\w+)?@[a-zA-Z_]+?(\.[a-zA-Z]{2,3})+$/;
   if (inputEmail.value.trim().length === 0) {
     defEmail.classList.add('is-hidden-text');
     confirmEmail.classList.add('is-hidden');
@@ -62,8 +60,7 @@ async function onFormSubmit(event) {
   try {
     await postData(userInfo);
 
-    //showModalIzi();
-    openModal();
+    showModalIzi();
 
     formEl.reset();
     localStorage.removeItem('work-Together-request');
@@ -71,7 +68,7 @@ async function onFormSubmit(event) {
     confirmEmail.classList.add('is-hidden');
     defEmail.classList.add('is-hidden-text');
   } catch (error) {
-    showEroorIzi();
+    showEroorIzi(error.message);
   }
 }
 

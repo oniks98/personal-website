@@ -1,46 +1,20 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-const modal = document.getElementById('modal');
-const closeModalButton = document.querySelector('.close-btn');
-
-function openModal() {
-  modal.style.display = 'flex';
-
-  document.addEventListener('keydown', handleEscape);
-}
-
-function closeModal() {
-  modal.style.display = 'none';
-
-  document.removeEventListener('keydown', handleEscape);
-}
-
-function handleEscape(event) {
-  if (event.key === 'Escape') {
-    closeModal();
-  }
-}
-
-closeModalButton.addEventListener('click', closeModal);
-
-modal.addEventListener('click', event => {
-  if (event.target === modal) {
-    closeModal();
-  }
-});
-
 function showModalIzi() {
   return iziToast.show({
+    class: 'toastStyle',
     theme: 'dark',
     class: 'toastStyle',
     title: 'Thank you for your interest in cooperation!',
+    titleColor: '#00b068',
     message:
       'The manager will contact you shortly to discuss further details and opportunities for cooperation. Please stay in touch.',
+    messageColor: '#292929',
     position: 'center',
     timeout: 0,
     close: true,
-    backgroundColor: 'rgba(28,29,32,1)',
+    backgroundColor: '#f0f0f0',
     overlay: true,
     overlayColor: 'rgba(0, 0, 0, 0.6)',
     progressBar: false,
@@ -52,15 +26,22 @@ function showModalIzi() {
 
 function showEroorIzi(error) {
   iziToast.show({
-    class: 'izi',
-    title: 'Error',
-    message: `Error: ${error}`,
+    class: 'toastStyle',
+    message: `${error}`,
+    messageColor: '#292929',
+    backgroundColor: '#f0f0f0',
+    overlayColor: 'rgba(0, 0, 0, 0.6)',
     position: 'center',
+    timeout: 0,
+    close: true,
+    backgroundColor: '#f0f0f0',
+    overlay: true,
+    overlayColor: 'rgba(0, 0, 0, 0.6)',
     progressBar: false,
     closeOnEscape: true,
-    closeOnClick: true,
-    timeout: 0,
+    closeOnClick: false,
+    overlayClose: true,
   });
 }
 
-export { openModal, showModalIzi, showEroorIzi };
+export { showModalIzi, showEroorIzi };
