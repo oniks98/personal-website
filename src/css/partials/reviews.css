@@ -12,13 +12,24 @@
 }
 
 .reviews-swiper-slide {
-  box-sizing: border-box;
   padding: 32px;
   text-align: left;
   text-decoration: none;
   color: #292929;
   background-color: var(--third-bcg);
   border-radius: 16px;
+}
+
+.reviews-text {
+  /* max-width: 265px; */
+  margin-bottom: 24px;
+  /* font-weight: 300; */
+  /* font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em; */
+  color: var(--main-cl);
+  height: 168px;
+  overflow: autoq;
 }
 
 .reviews-img {
@@ -28,16 +39,7 @@
 }
 
 .reviews-desc {
-  margin-bottom: 24px;
-}
-
-.reviews-text {
-  max-width: 265px;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
-  color: var(--main-cl);
+  /* margin-bottom: 24px; */
 }
 
 .reviews-swiper-wrapper {
@@ -50,11 +52,6 @@
   gap: 10px;
 }
 
-.reviews-button-icon {
-  stroke: #292929;
-  fill: none;
-}
-
 .reviews-prev-btn,
 .reviews-next-btn {
   display: flex;
@@ -65,12 +62,40 @@
   padding: 12px;
   width: 48px;
   height: 48px;
+  background-color: var(--third-bcg);
+  cursor: pointer;
+  transition: background-color 0.3s ease, opacity 0.3s ease,
+    border-color 0.3s ease;
 }
+
+/* Стан неактивної кнопки */
+.reviews-prev-btn.disabled,
+.reviews-next-btn.disabled,
+.reviews-prev-btn[disabled],
+.reviews-next-btn[disabled] {
+  background-color: var(--third-bcg); /* Колір неактивної кнопки */
+  cursor: not-allowed; /* Змінюємо курсор для неактивної кнопки */
+  opacity: 0.6; /* Зменшуємо прозорість */
+  border-color: #d1d1d1; /* Змінюємо колір бордюра для неактивної кнопки */
+}
+
+/* Ховер для активних кнопок */
+.reviews-prev-btn:hover:not(.disabled):not([disabled]),
+.reviews-next-btn:hover:not(.disabled):not([disabled]) {
+  background-color: var(--main-bcg);
+  border-color: var(--main-cl);
+}
+
 .reviews-prev-btn:hover,
 .reviews-prev-btn:focus,
 .reviews-next-btn:hover,
 .reviews-next-btn:focus {
   border: 1px solid #fff;
+}
+
+.reviews-button-icon {
+  stroke: var(--main-cl);
+  fill: none;
 }
 
 .list_reviews {
@@ -92,7 +117,7 @@
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.03em;
-  color: #292929;
+  color: var(--main-cl);
 }
 .list_reviews {
   max-width: 320px;
@@ -105,16 +130,7 @@
 
   color: #292929;
 }
-.reviews-next-btn {
-  background-color: var(--main-bcg);
-  cursor: not-allowed;
-  opacity: 0.6;
-}
-.reviews-prev-btn:disabled {
-  background-color: var(--main-bcg);
-  cursor: not-allowed;
-  opacity: 0.6;
-}
+
 @media screen and (min-width: 768px) {
   .reviews {
     padding-top: 124px;
@@ -124,5 +140,21 @@
     font-size: 108px;
     line-height: 1.14;
     margin-bottom: 60px;
+  }
+  .list_reviews {
+    max-width: 704px;
+    background-color: #e4e5e6;
+    border-radius: 16px;
+    padding: 20px;
+
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .reviews {
+    padding-top: 164px;
+  }
+  .reviews-swiper-slide {
+    max-width: 592px;
   }
 }

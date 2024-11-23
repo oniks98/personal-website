@@ -81,21 +81,34 @@ function initSwiper() {
       nextSlideMessage: 'Next slide',
     },
     allowTouchMove: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      1440: {
+        slidesPerView: 2,
+      },
+    },
   });
 }
 
 function checkButtonsState() {
-  const swiperInstance = document.querySelector('.swiper-reviews').swiper;
+  // Кнопка "Назад" (Previous)
   if (swiperInstance.isBeginning) {
-    prevBtn.classList.add('disabled');
+    prevBtn.classList.add('disabled'); // Додаємо клас "disabled"
+    prevBtn.setAttribute('disabled', true); // Встановлюємо атрибут disabled
   } else {
-    prevBtn.classList.remove('disabled');
+    prevBtn.classList.remove('disabled'); // Видаляємо клас "disabled"
+    prevBtn.removeAttribute('disabled'); // Забираємо атрибут disabled
   }
 
+  // Кнопка "Далі" (Next)
   if (swiperInstance.isEnd) {
-    nextBtn.classList.add('disabled');
+    nextBtn.classList.add('disabled'); // Додаємо клас "disabled"
+    nextBtn.setAttribute('disabled', true); // Встановлюємо атрибут disabled
   } else {
-    nextBtn.classList.remove('disabled');
+    nextBtn.classList.remove('disabled'); // Видаляємо клас "disabled"
+    nextBtn.removeAttribute('disabled'); // Забираємо атрибут disabled
   }
 }
 
