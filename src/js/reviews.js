@@ -7,28 +7,29 @@ import axios from 'axios';
 const reviewsWrapper = document.querySelector('.reviews-swiper-wrapper');
 const prevBtn = document.querySelector('.reviews-prev-btn');
 const nextBtn = document.querySelector('.reviews-next-btn');
-const reviewsContainer = document.querySelector('.reviews-container');
+const triggerSection = document.querySelector('.faq');
+
 const BASE_URL = 'https://portfolio-js.b.goit.study/api/reviews';
+let swiperInstance;
+let hasLoadedReviews = false;
 
 async function fetchReviews() {
   try {
     const response = await axios.get(BASE_URL);
     const reviews = response.data;
-    console.log('response', response);
 
-    if (!reviews || reviews.length === 0) {
-      reviewsWrapper.innerHTML = '<li class="list_reviews">Not Found</li>';
+    if (!reviews) {
+      reviewsWrapper.innerHTML =
+        '<li class="swiper-slide reviews-swiper-slide">Not Found</li>';
+      disableButtons();
       return;
     }
 
     const reviewsMarkup = reviews
       .map(
         review => `
-          <li class="swiper-slide reviews-swiper-slide">
-            
-            <div class="reviews-desc">
-             
-              <div class="reviews-text">${review.review}</div>
+   <li class="swiper-slide reviews-swiper-slide">
+              <p class="reviews-text">${review.review}</p>
             </div>
             <div class="reviews-info-author">
                 <img 
@@ -46,28 +47,26 @@ async function fetchReviews() {
       .join('');
 
     reviewsWrapper.innerHTML = reviewsMarkup;
-
     initSwiper();
+    hasLoadedReviews = true;
   } catch (error) {
     console.error('Error fetching reviews:', error);
+    reviewsWrapper.innerHTML = `<li class="swiper-slide reviews-swiper-slide">
+    <div class="error">
+    <p>Not Found</p>
+    <p>Failed to load reviews. Please try again later.</p>
+    </div>
+    </li>`;
 
-    reviewsWrapper.innerHTML = `<li class="list_reviews"><div class="error"><p>Not Found</p><p>Failed to load reviews. Please try again later.</p></div></li>`;
+    disableButtons();
   }
-}
-Error('');
-
-function Error(message) {
-  const errorElement = document.createElement('div');
-  errorElement.classList.add('error-message');
-  errorElement.textContent = message;
-  reviewsContainer.appendChild(errorElement);
 }
 
 function initSwiper() {
-  new Swiper('.swiper-reviews', {
+  swiperInstance = new Swiper('.swiper-reviews', {
     modules: [Navigation, Keyboard],
     slidesPerView: 1,
-    spaceBetween: 20,
+    spaceBetween: 32,
     navigation: {
       nextEl: '.reviews-next-btn',
       prevEl: '.reviews-prev-btn',
@@ -89,27 +88,58 @@ function initSwiper() {
         slidesPerView: 2,
       },
     },
+    on: {
+      slideChange: checkButtonsState,
+    },
   });
+  checkButtonsState();
 }
 
 function checkButtonsState() {
-  // Кнопка "Назад" (Previous)
   if (swiperInstance.isBeginning) {
-    prevBtn.classList.add('disabled'); // Додаємо клас "disabled"
-    prevBtn.setAttribute('disabled', true); // Встановлюємо атрибут disabled
+    prevBtn.classList.add('disabled');
+    prevBtn.setAttribute('disabled', true);
   } else {
-    prevBtn.classList.remove('disabled'); // Видаляємо клас "disabled"
-    prevBtn.removeAttribute('disabled'); // Забираємо атрибут disabled
+    prevBtn.classList.remove('disabled');
+    prevBtn.removeAttribute('disabled');
   }
 
-  // Кнопка "Далі" (Next)
   if (swiperInstance.isEnd) {
-    nextBtn.classList.add('disabled'); // Додаємо клас "disabled"
-    nextBtn.setAttribute('disabled', true); // Встановлюємо атрибут disabled
+    nextBtn.classList.add('disabled');
+    nextBtn.setAttribute('disabled', true);
   } else {
-    nextBtn.classList.remove('disabled'); // Видаляємо клас "disabled"
-    nextBtn.removeAttribute('disabled'); // Забираємо атрибут disabled
+    nextBtn.classList.remove('disabled');
+    nextBtn.removeAttribute('disabled');
   }
 }
 
-fetchReviews();
+function disableButtons() {
+  prevBtn.classList.add('disabled');
+  prevBtn.setAttribute('disabled', true);
+  nextBtn.classList.add('disabled');
+  nextBtn.setAttribute('disabled', true);
+}
+
+function observeTriggerSection() {
+  const options = {
+    root: null,
+    threshold: 0.2,
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !hasLoadedReviews) {
+        fetchReviews();
+        observer.unobserve(entry.target);
+      }
+    });
+  }, options);
+
+  if (triggerSection) {
+    observer.observe(triggerSection);
+  } else {
+    console.warn('Trigger section not found.');
+  }
+}
+
+observeTriggerSection();

@@ -14,32 +14,40 @@
 .reviews-swiper-slide {
   padding: 32px;
   text-align: left;
-  text-decoration: none;
-  color: #292929;
   background-color: var(--third-bcg);
   border-radius: 16px;
 }
 
 .reviews-text {
-  /* max-width: 265px; */
   margin-bottom: 24px;
-  /* font-weight: 300; */
-  /* font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.03em; */
-  color: var(--main-cl);
   height: 168px;
-  overflow: autoq;
+  overflow: auto;
+}
+
+.reviews-text::-webkit-scrollbar {
+  display: block;
+  width: 4px;
+  border-radius: 4px;
+}
+
+.reviews-text::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.reviews-text::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+
+.reviews-text::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
 }
 
 .reviews-img {
   border-radius: 24px;
   width: 40px;
   height: 40px;
-}
-
-.reviews-desc {
-  /* margin-bottom: 24px; */
 }
 
 .reviews-swiper-wrapper {
@@ -64,22 +72,21 @@
   height: 48px;
   background-color: var(--third-bcg);
   cursor: pointer;
+  outline: none;
   transition: background-color 0.3s ease, opacity 0.3s ease,
     border-color 0.3s ease;
 }
 
-/* Стан неактивної кнопки */
 .reviews-prev-btn.disabled,
 .reviews-next-btn.disabled,
 .reviews-prev-btn[disabled],
 .reviews-next-btn[disabled] {
-  background-color: var(--third-bcg); /* Колір неактивної кнопки */
-  cursor: not-allowed; /* Змінюємо курсор для неактивної кнопки */
-  opacity: 0.6; /* Зменшуємо прозорість */
-  border-color: #d1d1d1; /* Змінюємо колір бордюра для неактивної кнопки */
+  background-color: var(--third-bcg);
+  cursor: not-allowed;
+  opacity: 0.6;
+  border-color: #d1d1d1;
 }
 
-/* Ховер для активних кнопок */
 .reviews-prev-btn:hover:not(.disabled):not([disabled]),
 .reviews-next-btn:hover:not(.disabled):not([disabled]) {
   background-color: var(--main-bcg);
@@ -98,37 +105,54 @@
   fill: none;
 }
 
-.list_reviews {
-  padding-top: 32px;
-  padding-right: 32px;
-  padding-left: 32px;
-}
-
 .reviews-info-author {
   display: flex;
-  flex-direction: row;
-  align-content: center;
   gap: 16px;
 }
 
 .reviews-item-subtitle {
-  align-content: center;
   font-weight: 600;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
-  color: var(--main-cl);
 }
-.list_reviews {
-  max-width: 320px;
-  background-color: #e4e5e6;
-  border-radius: 16px;
-  padding: 20px;
-}
-.erorr {
-  text-align: center;
 
-  color: #292929;
+@media screen and (min-width: 768px) {
+  .reviews {
+    padding-top: 124px;
+  }
+
+  .reviews-title {
+    font-weight: 400;
+    font-size: 108px;
+    line-height: 1.14;
+    margin-bottom: 60px;
+  }
+
+  .reviews-text {
+    height: 120px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .reviews {
+    padding-top: 124px;
+  }
+
+  .reviews-title {
+    font-weight: 400;
+    font-size: 108px;
+    line-height: 1.14;
+    margin-bottom: 60px;
+  }
+
+  .reviews-text {
+    height: 120px;
+    margin-bottom: 0;
+  }
+}
+
+.error {
+  text-align: center;
+  color: var(--main-cl);
 }
 
 @media screen and (min-width: 768px) {
@@ -141,20 +165,10 @@
     line-height: 1.14;
     margin-bottom: 60px;
   }
-  .list_reviews {
-    max-width: 704px;
-    background-color: #e4e5e6;
-    border-radius: 16px;
-    padding: 20px;
-
-    margin: 0 auto;
-  }
 }
+
 @media screen and (min-width: 1280px) {
   .reviews {
     padding-top: 164px;
-  }
-  .reviews-swiper-slide {
-    max-width: 592px;
   }
 }
