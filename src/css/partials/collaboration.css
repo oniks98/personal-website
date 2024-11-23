@@ -1,4 +1,4 @@
-.collaboration {
+.collaboration-container {
     padding-top: 80px;
     padding-bottom: 80px;
 }
@@ -150,12 +150,12 @@ textarea::placeholder {
 
 
 @media screen and (min-width: 768px) {
-    .collaboration {
+    .collaboration-container {
         padding-top: 124px;
         padding-bottom: 124px;
         background-image: url('/images/hero/hero-bg-one-min-opt.png');
         background-repeat: no-repeat;
-        background-position: top right 32px;
+        background-position: right top 4px ;
         background-size: 336px 260px;
            
     }
@@ -201,13 +201,12 @@ textarea::placeholder {
 
 
 @media screen and (min-width: 1280px) {
-    .collaboration {
+    .collaboration-container {
         padding-top: 164px;
         padding-bottom: 164px;
-
         background-image: url('/images/benefits/decor-bg-3-min.png');
         background-repeat: no-repeat;
-        background-position: top right 32px;
+        background-position: right top 48px;
         background-size: 526px 408px;
     }
 
