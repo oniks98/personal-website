@@ -1,3 +1,6 @@
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
+
 import icon from '../icons/icons.svg';
 
 import projectDesk03 from '../images/projects/projects-desk-03-min.png';
@@ -180,29 +183,42 @@ const images = [
 
 const listProjects = document.querySelector('.projects-list_img');
 const loadMoreButton = document.querySelector('.projects-button_loading');
-
-loadMoreButton.addEventListener('click', loadProjects);
+const boxLoader = document.querySelector('.box-loader');
 
 let loadedProjectsCount = 0;
 let previousCount = 3;
 
+loadMoreButton.addEventListener('click', loadProjects);
+
 function loadProjects() {
-  const batchSize = 3;
-  const remainingProjects = images.slice(
-    loadedProjectsCount,
-    loadedProjectsCount + batchSize
-  );
+  try {
+    toggleButton(loadMoreButton, false);
+    toggleSpinner(true);
 
-  listProjects.insertAdjacentHTML(
-    'beforeend',
-    createMarkupProjects(remainingProjects)
-  );
+    const batchSize = 3;
+    const remainingProjects = images.slice(
+      loadedProjectsCount,
+      loadedProjectsCount + batchSize
+    );
 
-  loadedProjectsCount += remainingProjects.length;
-  scrollOnLoad();
+    listProjects.insertAdjacentHTML(
+      'beforeend',
+      createMarkupProjects(remainingProjects)
+    );
 
-  if (loadedProjectsCount >= images.length) {
-    loadMoreButton.classList.add('hidden');
+    loadedProjectsCount += remainingProjects.length;
+
+    scrollOnLoad();
+
+    toggleButton(loadMoreButton, true);
+
+    if (loadedProjectsCount >= images.length) {
+      toggleButton(loadMoreButton, false);
+    }
+  } catch (error) {
+    showMessage('❌ Sorry, there was a server error. Please try again later!');
+  } finally {
+    toggleSpinner(false);
   }
 }
 
@@ -262,4 +278,21 @@ function scrollOnLoad() {
     });
   }
   previousCount += 3;
+}
+
+function toggleButton(button, isVisible) {
+  button.style.display = isVisible ? 'block' : 'none';
+}
+
+function toggleSpinner(isVisible) {
+  boxLoader.style.display = isVisible ? 'block' : 'none';
+}
+
+function showMessage(message) {
+  iziToast.show({
+    message,
+    color: 'red',
+    position: 'topRight',
+    timeout: 2000,
+  });
 }
