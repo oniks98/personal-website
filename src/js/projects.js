@@ -190,7 +190,7 @@ let previousCount = 3;
 
 loadMoreButton.addEventListener('click', loadProjects);
 
-async function loadProjects() {
+function loadProjects() {
   try {
     toggleButton(loadMoreButton, false);
     toggleSpinner(true);
@@ -201,7 +201,7 @@ async function loadProjects() {
       loadedProjectsCount + batchSize
     );
 
-    await listProjects.insertAdjacentHTML(
+    listProjects.insertAdjacentHTML(
       'beforeend',
       createMarkupProjects(remainingProjects)
     );
