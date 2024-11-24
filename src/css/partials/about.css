@@ -114,9 +114,6 @@
     gap: 136px;
   }
 
-  /* .educ-title{
-    width: 384px;
-} */
 
   .educ-title,
   .role-title,
@@ -128,12 +125,14 @@
   }
 
   .section-about-me {
-    background-image: url(/images/about/bg-2-min-min.png);
+    background-image: url(/images/about/bg-7-min.png);
     background-repeat: no-repeat;
-    background-position: right 10px bottom 230px;
+    background-position: right 36px bottom 156px;
     background-size: auto;
+
   }
 
+  
   .about-me-info {
     flex-direction: row;
   }
@@ -175,13 +174,25 @@
     gap: 136px;
   }
 
-  .about-me-info {
-    align-items: flex-start;
-    justify-content: center;
-    gap: 136px;
+  .section-about-me {
+      background-image: url(/images/about/bg-2-min-min.png);
+      background-repeat: no-repeat;
+      background-position: right 32px bottom 230px;
+      background-size: auto;
   }
 
   .bio-text {
     width: 488px;
   }
+   
+   .about-me-content-item {
+    width: 384px;
+   }
+
+   
+   
+   .about-me-info {
+    padding-left: 210px;
+    gap: 136px;
+   }
 }

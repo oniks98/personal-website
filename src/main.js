@@ -8,3 +8,4 @@ import './js/collaboration';
 import './js/projects';
 import './js/questions';
 import './js/reviews';
+import './js/tesh-skills';
