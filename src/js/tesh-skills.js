@@ -1,71 +1,78 @@
-let tapeSkills = ['HTML/CSS', 'JAVASCRIPT', 'REACT', 'NODE.JS', 'REACT NATIVE', 'TYPESCRIPT'];
+
+let tapeSkills = [
+  'HTML/CSS',
+  'JAVASCRIPT',
+  'REACT',
+  'NODE.JS',
+  'REACT NATIVE',
+  'TYPESCRIPT',
+];
 
 let lenta = [];
 
-for (let a = 0; a <= 2; a++) {
-lenta.push(...tapeSkills);
+for (let a = 0; a <= 3; a++) {
+  lenta.push(...tapeSkills);
 }
 
-
-console.log(lenta);
-
-const bannerItem = document.getElementById("banner__item");
+const bannerItem = document.getElementById('banner__item');
 bannerItem.innerHTML = ``;
 
-
-
 function addItems() {
-    lenta.forEach(lang => {
-        bannerItem.innerHTML += `<span class = "banner__text">${lang}</span>
+  lenta.forEach(lang => {
+    bannerItem.innerHTML += `<span class = "banner__text">${lang}</span>
     <span class = "banner-point"></span>`;
-
-    });
-}
-
-function addItem() { 
-    tapeSkills.forEach(lang => {
-        bannerItem.innerHTML += `<span class = "banner__text">${lang}</span>
+  });
+  
+  lenta.forEach(lang => {
+    bannerItem.innerHTML += `<span class = "banner__text">${lang}</span>
     <span class = "banner-point"></span>`;
-    });
+  });
 }
-
 
 let position = 0;
 
-function move(){
-position -=2;
-bannerItem.style.transform = `translateX(${position}px)`;
-requestAnimationFrame(move);
+function move() {
+  position -= 2;
+  bannerItem.style.transform = `translateX(${position}px)`;
+  if (Math.abs(position) >= bannerItem.scrollWidth) {
+    position = 0;
+  }
+
+  requestAnimationFrame(move);
 }
-move()
-    
 
 addItems();
+move();
 
-setTimeout(addItem, 15000);
-
-
-
-const bannerItemBottom = document.getElementById("banner__item_bottom");
-bannerItemBottom.innerHTML = "";
-
+const bannerItemBottom = document.getElementById('banner__item_bottom');
+bannerItemBottom.innerHTML = ``;
 
 function addItemsBottom() {
-    lenta.forEach(lang => {
-        bannerItemBottom.innerHTML += `<span class="banner__text">${lang}</span>
+  lenta.forEach(lang => {
+    bannerItemBottom.innerHTML += `<span class="banner__text">${lang}</span>
         <span class="banner-point"></span>`;
-    });
+  });
+
+  lenta.forEach(lang => {
+    bannerItemBottom.innerHTML += `<span class="banner__text">${lang}</span>
+        <span class="banner-point"></span>`;
+  });
 }
 
 addItemsBottom();
 
-
 let positionBottom = 0;
+const maxPositionBottom = bannerItemBottom.scrollWidth;
 
 function moveRight() {
-    positionBottom += 2; 
-    bannerItemBottom.style.transform = `translateX(${positionBottom}px)`;
-    requestAnimationFrame(moveRight);
+  positionBottom += 2;
+
+  if (positionBottom >= maxPositionBottom) {
+    positionBottom = -bannerItemBottom.offsetWidth;
+  }
+
+  bannerItemBottom.style.transform = `translateX(${positionBottom}px)`;
+  requestAnimationFrame(moveRight);
 }
 
 moveRight();
