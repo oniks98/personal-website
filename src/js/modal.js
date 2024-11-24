@@ -2,6 +2,7 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 function showModalIzi() {
+  document.body.style.overflow = 'hidden';
   return iziToast.show({
     class: 'toastStyle',
     theme: 'dark',
@@ -21,11 +22,13 @@ function showModalIzi() {
     closeOnEscape: true,
     closeOnClick: false,
     overlayClose: true,
+    onClosed: closeModalIzi,
   });
 }
 
 function showEroorIzi(error) {
-  iziToast.show({
+  document.body.style.overflow = 'hidden';
+  return iziToast.show({
     class: 'toastStyle',
     message: `${error}`,
     messageColor: '#292929',
@@ -41,7 +44,12 @@ function showEroorIzi(error) {
     closeOnEscape: true,
     closeOnClick: false,
     overlayClose: true,
+    onClosed: closeModalIzi,
   });
 }
 
 export { showModalIzi, showEroorIzi };
+
+function closeModalIzi() {
+  document.body.style.overflow = '';
+}
