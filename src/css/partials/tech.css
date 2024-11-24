@@ -1,77 +1,88 @@
+
 .tech-skills {
-  width: 100%;
-  overflow: hidden;
+    width: 100%;
+    overflow: hidden;
+    padding: 0 0 30px 0px;
 }
 
 .banner {
-  width: 100%;
-  position: relative;
-  padding: 32px 0;
+    width: 100%;
+    position: relative;
+    padding: 32px 0;
 }
 
 .banner--green .banner-point {
-  background-color: var(--accent-cl);
+    background-color: var(--accent-cl);
 }
 
+
 .banner--white .banner-point {
-  background-color: var(--main-cl);
+    background-color: var(--main-cl);
 }
 
 .banner:nth-child(1) {
-  background-color: var(--second-bcg);
-  z-index: 1;
-  color: var(--main-cl);
+    background-color: var(--second-bcg);
+    z-index: 1;
+    color: var(--main-cl);
 }
 
 .banner:nth-child(2) {
-  background-color: var(--third-bcg);
-  color: #14c57c;
+    background-color: var(--third-bcg);
+    color: #14C57C;
 }
 
 .banner:nth-child(2) {
-  transform: rotateZ(2deg);
+    transform: rotateZ(2deg);
 }
 
 .banner__wrapper.right {
-  display: flex;
-  animation: tickerScrollRight 15s linear infinite;
+    display: flex;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    /* animation: tickerScrollRight 15s linear infinite; */
 }
 
 .banner__wrapper.left {
-  display: flex;
-  animation: tickerScrollLeft 15s linear infinite;
+    display: flex;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    /* animation: tickerScrollLeft 15s linear infinite; */
 }
 
 .banner__item {
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
 }
 
 .banner__item {
-  display: flex;
-  gap: 16px;
+    display: flex;
+    gap: 16px
 }
 
 .banner__item .banner__text {
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 1.25;
-  letter-spacing: 0.02em;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
 }
 
 .banner-point {
-  display: inline-block;
-  border-radius: 2px;
-  width: 8px;
-  height: 8px;
-  background: var(--accent-cl);
+    display: inline-block;
+    border-radius: 2px;
+    width: 8px;
+    height: 8px;
+    background: var(--accent-cl);
 }
 
-@media screen and (min-width: 768px) {
-  .banner__item .banner__text {
+
+@media screen and (min-width: 768px){
+
+    .banner__item .banner__text {
     font-size: 36px;
-    line-height: 1.33;
+    line-height: 1.33333;
     letter-spacing: 0.01em;
-  }
+ }
 }
+
+
