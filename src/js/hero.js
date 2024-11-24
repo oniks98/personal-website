@@ -10,12 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     'Frontend Developer',
   ];
 
-  gsap.to('.cursor', {
-    opacity: 0,
-    ease: 'power2.inOut',
-    repeat: -1,
-  });
-
   gsap.from('.hi', {
     y: 100,
     duration: 1,
