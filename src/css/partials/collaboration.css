@@ -1,6 +1,6 @@
-.collaboration {
-  padding-top: 80px;
-  padding-bottom: 80px;
+.collaboration-container {
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 .green-collorText {
@@ -136,28 +136,42 @@
 }
 
 @media screen and (min-width: 768px) {
-  .collaboration {
-    padding-top: 124px;
-    padding-bottom: 124px;
-    background-image: url('/images/hero/hero-bg-one-min-opt.png');
-    background-repeat: no-repeat;
-    background-position: top right 32px;
-    background-size: 336px 260px;
-  }
+    .collaboration-container {
+        padding-top: 124px;
+        padding-bottom: 124px;
+        background-image: url('/images/hero/hero-bg-one-min-opt.png');
+        background-repeat: no-repeat;
+        background-position: right top 4px ;
+        background-size: 336px 260px;
+           
+    }
+ 
+    .collaboration-title {
+        font-size: 108px;
+        line-height: 1.15;
+        letter-spacing: 0.02em;
+        margin-bottom: 60px;
+    }
 
-  .collaboration-title {
-    font-size: 108px;
-    line-height: 1.15;
-    letter-spacing: 0.02em;
-    margin-bottom: 60px;
-  }
+    .collaboration-text {
+        font-size: 20px;
+        line-height: 1.6;
+        width: 500px;
+        margin-bottom: 32px;
 
-  .collaboration-text {
-    font-size: 20px;
-    line-height: 1.6;
-    width: 500px;
-    margin-bottom: 32px;
-  }
+    }
+
+    .contacts-list {
+        flex-direction: row;
+        margin-bottom: 60px;
+        column-gap: 16px;
+
+    }
+
+    .form-input {
+        max-width: 704px;
+    }
+
 
   .contacts-list {
     flex-direction: row;
@@ -179,30 +193,40 @@
 }
 
 @media screen and (min-width: 1280px) {
-  .collaboration {
-    padding-top: 164px;
-    padding-bottom: 164px;
+    .collaboration-container {
+        padding-top: 164px;
+        padding-bottom: 164px;
+        background-image: url('/images/benefits/decor-bg-3-min.png');
+        background-repeat: no-repeat;
+        background-position: right top 48px;
+        background-size: 526px 408px;
+    }
 
-    background-image: url('/images/benefits/decor-bg-3-min.png');
-    background-repeat: no-repeat;
-    background-position: top right 32px;
-    background-size: 526px 408px;
-  }
+    .collaboration-title {
+        width: 600px;
+        margin-bottom: 80px;
 
-  .collaboration-title {
-    width: 600px;
-    margin-bottom: 80px;
-  }
+    }
 
-  .collaboration-text {
-    margin-bottom: 120px;
-  }
+    .collaboration-text {
+        margin-bottom: 120px;
+    }
 
-  .contacts-list {
-    display: flex;
-    flex-direction: column;
-    row-gap: 16px;
-  }
+    .contacts-list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+    }
+
+    .collab-wall {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .form-input {
+        width: 592px;
+    }
+
 
   .collab-wall {
     display: flex;
