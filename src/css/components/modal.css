@@ -1,64 +1,60 @@
-/* 
-button:hover {
-    background-color: #45a049;
+.toastStyle .iziToast-title {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 20px !important;
+  line-height: 1.6 !important;
+  letter-spacing: 0.03em !important;
+  text-transform: uppercase !important;
+  text-align: center !important;
+  color: #00b068;
+  margin-bottom: 16px !important;
+}
+
+.toastStyle .iziToast-message {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.03em !important;
+  text-align: center !important;
+  color: #292929;
+}
+
+.toastStyle .iziToast-body {
+  padding: 32px 48px !important;
+  margin: 0 !important ;
+}
+
+@media screen and (min-width: 768px) {
+  .toastStyle .iziToast-body {
+    padding: 64px !important;
   }
-  
-  .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .modal-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 16px;
-    width: 400px;
-    max-width: 90%;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 24px;
-    color: #333;
-    cursor: pointer;
-  }
-  
-  .close-btn:hover {
-    color: red;
-  }
-  
-  .highlight {
-    color: #4caf50;
-    font-weight: bold;
-  } */
-/* Основний стиль для тіла сторінки */
+}
+
+.iziToast {
+  padding: 0 !important;
+  border: 1px solid #e4e5e6;
+  border-radius: 16px !important;
+  max-width: 492px;
+}
+
+.toastStyle .iziToast-close {
+  top: 0 !important;
+  right: 14px !important;
+  width: 24px !important;
+  height: 24px !important;
+  background: none !important;
+  border: none !important;
+  padding: 6px !important;
+}
+
+.toastStyle .iziToast-close:before {
+  content: '×';
+  color: #292929;
+  font-size: 25px;
+}
 
 /* 
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    background-color: #4caf50;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-   */
 
 .modal {
   display: none;
@@ -70,7 +66,6 @@ button:hover {
   background-color: rgba(0, 0, 0, 0.5);
   align-items: center;
   justify-content: center;
-  z-index: 1000;
 }
 
 .modal-content {
@@ -81,7 +76,6 @@ button:hover {
   max-width: 90%;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  position: relative;
 }
 
 .close-btn {
@@ -100,4 +94,4 @@ button:hover {
 .highlight {
   color: #4caf50;
   font-weight: bold;
-}
+} */
