@@ -24,7 +24,7 @@ import{i as y,g as u,T as W,a as $,A as H,S as K,N as Z,K as Q}from"./assets/ven
           <div class="projects-box_descr">
             <h3 class="projects-img_title">${e}</h3>
             <a
-              href="https://bulatovatati.github.io/landing-page-2.0/"
+              href="https://oniks98.github.io/personal-website/"
               class="projects-button_link"
               target="_blank"
             >
