@@ -53,6 +53,7 @@
     text-transform: uppercase;
     color: var(--main-cl);
     padding: 28px 24px;
+    padding-right: 80px;
     position: relative;
   
     transition: color var(--time) var(--cubic), background-color var(--time) var(--cubic);
@@ -104,7 +105,7 @@
   
     flex-shrink: 0; 
     margin-left: 16px;
-    top: 28px; 
+    top: 40px; 
     right: 24px; 
   
     border: solid var(--main-cl); 
@@ -132,6 +133,7 @@
     .faq-question {
       font-size: 20px;
     line-height: 1.6;
+padding-right: 100px;
     }
   }
 
